@@ -1,0 +1,152 @@
+[
+  {
+    "slug": "hydrogen-burner-cfd",
+    "title": "Zero-Carbon Hydrogen Burner for Domestic Heating",
+    "period": "Sep 2025 to Jun 2026",
+    "track": "simulation",
+    "tools": ["ANSYS Fluent", "RANS k-omega SST", "GRI-Mech 3.0", "CNC machining"],
+    "summary": "Led a team designing a novel hydrogen burner, and led the CFD model that predicted stable hydrogen combustion when hydrogen testing was not possible.",
+    "sections": [
+      {
+        "heading": "What I did",
+        "body": [
+          "I led a multidisciplinary team through the full design lifecycle: concept generation, design requirements, prototyping, testing and validation. The project was graded 72%.",
+          "I built the CFD model in ANSYS Fluent using RANS k-omega SST turbulence and GRI-Mech 3.0 finite-rate chemistry. Teammates adopted the workflow for their own simulations."
+        ]
+      },
+      {
+        "heading": "Method",
+        "body": [
+          "Polyhedral meshes with wall-resolved inflation layers and local refinement. Mesh independence was shown at 2.3 million cells, using a periodic radial slice to keep the computational cost down.",
+          "The model was validated against cold-flow and reactive methane experiments before being extended to hydrogen."
+        ]
+      },
+      {
+        "heading": "Result",
+        "body": [
+          "The model traced missing outer-ring flames to ambient air dilution. A quartz shield then corrected this and gave a uniform flame.",
+          "The validated model predicted stable hydrogen combustion at 8.2 kW and equivalence ratio 0.4 with no flashback.",
+          "I also used CNC machining to make prototype components, after evaluating manufacturing processes and joining methods against operating conditions and failure modes."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "naca0012-rans",
+    "title": "NACA 0012 Airfoil RANS Analysis",
+    "period": "Sep 2025 to Jan 2026",
+    "track": "simulation",
+    "tools": ["ANSYS Fluent", "RNG k-epsilon", "Spalart-Allmaras", "Mesh adaption"],
+    "summary": "A 2D steady RANS study from -11 to +15 degrees angle of attack, validated against NASA data, with a clear account of where and why drag disagreed.",
+    "sections": [
+      {
+        "heading": "What I did",
+        "body": [
+          "I ran lift and drag polars across the angle-of-attack range and estimated near-stall behaviour at about 14.5 degrees. The project was graded 80%."
+        ]
+      },
+      {
+        "heading": "Method",
+        "body": [
+          "I chose turbulence models against the near-wall resolution: RNG k-epsilon with wall functions on the coarse mesh, then Spalart-Allmaras once Fluent's Adapt function had resolved the viscous sublayer.",
+          "I checked Reynolds number similarity by scaling geometry and fluid properties together, and the non-dimensional coefficients held to within 0.6%."
+        ]
+      },
+      {
+        "heading": "Result",
+        "body": [
+          "Lift matched NASA experimental data to within 1.6% and was stable to within 0.2% under grid refinement.",
+          "Drag shifted 25% with refinement because of near-wall sensitivity, and I gave three evidence-based reasons for the larger drag discrepancy against experiment."
+        ]
+      },
+      {
+        "heading": "Planned follow-up",
+        "body": [
+          "Repeat the study in SU2 or OpenFOAM and compare the open-source results with Fluent. This is the first project on the simulation track."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "h2ome-mars-settlement",
+    "title": "H2OME: Mars Settlement Siting",
+    "period": "Sep 2026",
+    "track": "ml",
+    "tools": ["Python", "Optimisation", "Gaussian process", "Claude Code", "Cursor"],
+    "summary": "A hackathon entry (GirlsWhoML x PhysicsX) that sized a closed-loop household energy and water system and assessed candidate Mars sites with a Gaussian process model.",
+    "sections": [
+      {
+        "heading": "What I did",
+        "body": [
+          "In a team of three I designed the household unit for a Mars settlement: solar power, battery storage, water electrolysis, a hydrogen fuel cell and a Sabatier reactor that recycles water.",
+          "I built an optimiser that sizes each site's solar array and battery to deliver 400 kWh per sol at 95% reliability, based on that site's own conditions rather than one fixed design."
+        ]
+      },
+      {
+        "heading": "Team result",
+        "body": [
+          "With two teammates I built a Gaussian process model to assess thousands of candidate sites across 80 locations and 8 water-mining hubs. It found that hydrogen from the hubs extends habitation from about 55 to 84 degrees latitude."
+        ]
+      },
+      {
+        "heading": "What I learned",
+        "body": [
+          "This was where I learned to work with AI coding tools, Claude Code and Cursor, to speed up iteration on the simulation workflow."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "battery-digital-twin",
+    "title": "Battery Manufacturing Digital Twin",
+    "period": "Feb 2026 to Apr 2026",
+    "track": "software",
+    "tools": ["Python", "Statistical validation", "Industry 4.0"],
+    "summary": "A Python digital twin of an automotive battery production line, validated against experimental data to judge how far a virtual replica can be trusted.",
+    "sections": [
+      {
+        "heading": "What I did",
+        "body": [
+          "I built a Python digital twin to analyse efficiency and operational performance across the production supply chain. The project was graded 82%.",
+          "I built the bill of materials for the line and analysed facility layouts using Industry 4.0 and continuous improvement principles, along with automation strategies to improve throughput."
+        ]
+      },
+      {
+        "heading": "Validation",
+        "body": [
+          "Twin outputs were compared with experimental data using statistical analysis, to evaluate the accuracy and limits of virtual replication and support data-driven decisions on process improvement."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "heat-sink-optimisation",
+    "title": "Heat Sink Performance Optimisation",
+    "period": "Feb 2024 to Apr 2024",
+    "track": "design",
+    "tools": ["ANSYS", "MATLAB", "Parametric modelling"],
+    "summary": "A multi-physics study of heat transfer, flow and thermal stress across heat sink configurations, with hand calculations checking the simulations.",
+    "sections": [
+      {
+        "heading": "What I did",
+        "body": [
+          "I designed and analysed multi-physics models in ANSYS and MATLAB to evaluate heat transfer, flow behaviour and thermal stress across heat sink configurations. The project was graded 94%.",
+          "I used parametric modelling and optimisation to weigh structural against thermal trade-offs, validating each decision against performance targets."
+        ]
+      },
+      {
+        "heading": "Checks",
+        "body": [
+          "Hand calculations supported the simulation findings and confirmed design margins across the configurations.",
+          "This connects directly to my Siemens work on electronics thermal management in Simcenter FLOEFD."
+        ]
+      },
+      {
+        "heading": "Planned follow-up",
+        "body": [
+          "Train a surrogate model on this design space and report its error against the full simulation. This is the first project on the engineering and machine learning track."
+        ]
+      }
+    ]
+  }
+]

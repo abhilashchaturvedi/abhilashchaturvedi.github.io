@@ -1,0 +1,48 @@
+{
+  "name": "Abhilash Chaturvedi",
+  "tagline": "MEng Mechanical Engineer. Simulation, automation and design.",
+  "intro": "I am a First Class MEng Mechanical Engineering graduate from the University of Southampton. I spent a year at Siemens DISW testing and automating a CFD and FEA simulation platform, and my degree projects covered combustion CFD, aerodynamics, thermal design and digital twins. This site collects that work and the new projects I am building to widen my skills.",
+  "email": "abhilashchaturvedi03@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/abhilashc2003/",
+  "github": "",
+  "tracks": [
+    {
+      "id": "simulation",
+      "title": "Open-source simulation",
+      "why": "Employers use more than ANSYS. Showing the same rigour in OpenFOAM or SU2 proves the method, not the tool.",
+      "planned": [
+        "Rebuild the NACA 0012 airfoil study in SU2 or OpenFOAM and compare against the Fluent and NASA results",
+        "Scripted mesh-independence and validation workflow in Python, reusable across cases",
+        "Open FEA beam or bracket study (CalculiX or FEniCS) checked against hand calculations"
+      ]
+    },
+    {
+      "id": "ml",
+      "title": "Engineering and machine learning",
+      "why": "Builds on the PyTorch automation at Siemens and the Gaussian process model from H2OME.",
+      "planned": [
+        "Surrogate model for heat sink or airfoil data, with an honest error analysis against the full simulation",
+        "Design-of-experiments and optimisation loop driving a parametric model"
+      ]
+    },
+    {
+      "id": "software",
+      "title": "Engineering software and tooling",
+      "why": "Fills the CI/CD and SQL gaps that appear in roles matching the QA and test archetype.",
+      "planned": [
+        "Automated regression tests with CI for the simulation scripts above",
+        "Small results database and dashboard for storing and comparing simulation runs"
+      ]
+    },
+    {
+      "id": "design",
+      "title": "Design and manufacture",
+      "why": "Traditional mechanical design is still the core of most graduate roles, so it deserves visible, current work.",
+      "planned": [
+        "A designed-for-manufacture part: CAD model, drawings with tolerancing, and a process and material justification",
+        "DFM review of an existing product with cost and process trade-offs",
+        "CNC or 3D-printed prototype documented from CAD to finished part"
+      ]
+    }
+  ]
+}
