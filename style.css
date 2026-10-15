@@ -197,3 +197,10 @@ h3 { font-size: 1.05rem; line-height: 1.35; margin: 0 0 0.35rem; }
   body { background: #fff; color: #000; }
   .card, .zoom { break-inside: avoid; }
 }
+
+/* Centred hero */
+.hero { text-align: center; }
+.hero .id { flex-direction: column; justify-content: center; gap: 14px; }
+.hero .lead, .hero .intro { margin-left: auto; margin-right: auto; }
+.hero .actions { justify-content: center; }
+.hero .stats { text-align: center; }
