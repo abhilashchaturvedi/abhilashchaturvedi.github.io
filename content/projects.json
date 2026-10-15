@@ -1,16 +1,332 @@
 [
   {
-    "slug": "hydrogen-burner-cfd",
-    "title": "Zero-Carbon Hydrogen Burner for Domestic Heating",
-    "period": "Sep 2025 to Jun 2026",
+    "slug": "battery-digital-twin",
+    "title": "Battery Manufacturing Digital Twin and Life Cycle Assessment",
+    "period": "2026",
+    "course": "SESM6049, University of Southampton",
+    "grade": "82%",
+    "track": "software",
+    "tools": [
+      "Python",
+      "OpenCV",
+      "Quanser QArm",
+      "QLabs",
+      "ISO 14040 LCA"
+    ],
+    "summary": "A digital twin of a battery cell-finishing station, validated against lab hardware, then extended into a facility layout and a life cycle assessment.",
+    "facts": [
+      {
+        "value": "23.7%",
+        "label": "of demand met by one arm (42,092 of 177,500 cells a year)"
+      },
+      {
+        "value": "2x",
+        "label": "output from a dual-arm layout (84,184 cells a year)"
+      },
+      {
+        "value": "93.6%",
+        "label": "energy under-prediction found by validating the twin"
+      }
+    ],
+    "cover": 0,
+    "figures": [
+      {
+        "src": "battery-1.jpg",
+        "caption": "Dual-arm cell-finishing station in the digital twin"
+      },
+      {
+        "src": "battery-2.jpg",
+        "caption": "Facility layout with exclusion zones"
+      },
+      {
+        "src": "battery-3.jpg",
+        "caption": "LCA impact comparison across propulsion systems (diesel, gasoline, LFP, sodium-ion)"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The problem",
+        "body": [
+          "Two Quanser QArm robot arms sort 18650 battery cells by colour at a cell-finishing station. The question was whether the station can keep up with production, and how far a simulation of it can be trusted.",
+          "A QLabs digital twin ran in parallel with the physical lab hardware. It used OpenCV colour detection and inverse kinematics for the arm motion, written in Python."
+        ]
+      },
+      {
+        "heading": "Throughput",
+        "body": [
+          "From the sorting cycle time and failure downtime, I estimated single-arm throughput at 42,092 cells per year against a demand of 177,500. That is 23.7% of the requirement, so the station is the bottleneck. A dual-arm layout doubles output to 84,184 cells per year."
+        ]
+      },
+      {
+        "heading": "Validating the twin",
+        "body": [
+          "I checked the twin against the lab. It under-predicted the energy per sorting cycle by 93.6%: 46.7 J simulated against 128.83 J measured. Comparing current and PWM profiles traced the gap to friction and heating losses that the twin does not model.",
+          "Reporting that gap, and where it comes from, is what makes the throughput figure usable."
+        ]
+      },
+      {
+        "heading": "From station to factory",
+        "body": [
+          "I extended the work into a facility layout using a relationship matrix, a bill of materials and a materials requirements plan across two cell chemistries. I analysed it with Industry 4.0 and continuous improvement principles, and with automation strategies to improve throughput.",
+          "An ISO 14040 life cycle assessment then compared LFP, sodium-ion and diesel/gasoline vehicle propulsion."
+        ]
+      }
+    ],
+    "takeaway": "A simulation is only as useful as its validation. Checking the twin against hardware showed where it was wrong and why, which mattered more than the throughput figure itself.",
+    "evidence": "The full 27-page coursework report can be shared on request."
+  },
+  {
+    "slug": "naca0012-rans",
+    "title": "NACA 0012 Airfoil RANS CFD Analysis",
+    "period": "Jan 2026",
+    "course": "FEEG6005 Applications of CFD, University of Southampton",
+    "grade": "80%",
     "track": "simulation",
-    "tools": ["ANSYS Fluent", "RANS k-omega SST", "GRI-Mech 3.0", "CNC machining"],
-    "summary": "Led a team designing a novel hydrogen burner, and led the CFD model that predicted stable hydrogen combustion when hydrogen testing was not possible.",
+    "tools": [
+      "ANSYS Fluent",
+      "RNG k-epsilon",
+      "Spalart-Allmaras",
+      "Mesh adaption"
+    ],
+    "summary": "A 2D steady RANS study from -11 to +15 degrees angle of attack, validated against NASA data, with a clear account of why drag disagreed.",
+    "facts": [
+      {
+        "value": "1.6%",
+        "label": "lift coefficient error against NASA experiment"
+      },
+      {
+        "value": "0.2%",
+        "label": "lift change between meshes, while drag moved 25%"
+      },
+      {
+        "value": "14.5°",
+        "label": "estimated near-stall angle of attack"
+      }
+    ],
+    "cover": 0,
+    "figures": [
+      {
+        "src": "naca-1.jpg",
+        "caption": "Pressure coefficient contour"
+      },
+      {
+        "src": "naca-2.jpg",
+        "caption": "Adapted mesh near the leading edge"
+      },
+      {
+        "src": "naca-3.jpg",
+        "caption": "Cp: CFD against experimental data"
+      }
+    ],
     "sections": [
       {
         "heading": "What I did",
         "body": [
-          "I led a multidisciplinary team through the full design lifecycle: concept generation, design requirements, prototyping, testing and validation. The project was graded 72%.",
+          "I ran a 2D steady RANS analysis of a NACA 0012 airfoil from -11 to +15 degrees angle of attack in ANSYS Fluent, producing lift and drag polars and a near-stall estimate of about 14.5 degrees. It was an individual project."
+        ]
+      },
+      {
+        "heading": "Choosing the turbulence model",
+        "body": [
+          "I chose the turbulence model from a y+ estimate rather than by default. The first cells sat in the buffer layer, so I used RNG k-epsilon with wall functions on the coarse mesh. After refining the mesh with Fluent's Adapt function to reach y+ of about 2.9, I switched to Spalart-Allmaras."
+        ]
+      },
+      {
+        "heading": "Convergence",
+        "body": [
+          "Lift converged to within 0.2% between meshes, while drag changed by about 25%. That showed drag was the near-wall-sensitive quantity and that the refined mesh gave the trustworthy figure."
+        ]
+      },
+      {
+        "heading": "Validation",
+        "body": [
+          "Lift matched NASA experimental data to within 1.6%. I explained the larger drag gap with three causes: a Reynolds number roughly 7 times lower than the dataset, wall-function error, and the model treating the boundary layer as turbulent from the leading edge.",
+          "Reynolds-similarity scaling, with geometry and fluid properties scaled together, preserved the coefficients to within 0.6%."
+        ]
+      },
+      {
+        "heading": "Planned follow-up",
+        "body": [
+          "Repeat the study in SU2 or OpenFOAM and compare the open-source results with Fluent. This is the first project on the open-source simulation track."
+        ]
+      }
+    ],
+    "takeaway": "Converged residuals do not mean a correct answer. Separating numerical error from modelling error, and reporting confidence per quantity, is what makes a CFD result usable.",
+    "evidence": "The project report and Fluent setup can be shared on request."
+  },
+  {
+    "slug": "marine-instrument-ctd",
+    "title": "Marine Instrument Consultancy Project (National Oceanography Centre)",
+    "period": "Mar to Apr 2024",
+    "course": "University of Southampton",
+    "grade": "75%",
+    "track": "design",
+    "tools": [
+      "Structural design",
+      "FEA",
+      "CFD",
+      "Battery and BMS design",
+      "CAD"
+    ],
+    "summary": "Structural and electrical design of a CTD instrument for coral reef monitoring, built to integrate into an autonomous underwater vehicle.",
+    "facts": [
+      {
+        "value": "7 Ah",
+        "label": "lithium polymer pack, chosen from six chemistries"
+      },
+      {
+        "value": "8.2 h",
+        "label": "calculated mission runtime"
+      },
+      {
+        "value": "4",
+        "label": "battery protections designed in: overcharge, deep discharge, short circuit, thermal"
+      }
+    ],
+    "cover": 0,
+    "figures": [
+      {
+        "src": "marine-1.jpg",
+        "caption": "Instrument housing with electronics (CAD)"
+      },
+      {
+        "src": "marine-2.jpg",
+        "caption": "Structural FEA of the housing"
+      },
+      {
+        "src": "marine-3.jpg",
+        "caption": "Power and battery protection circuit with PCB"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The brief",
+        "body": [
+          "I delivered this individually for the National Oceanography Centre (NOCS). I defined the requirements for a novel CTD (conductivity, temperature, depth) instrument for coral reef monitoring, designed to integrate into an autonomous underwater vehicle."
+        ]
+      },
+      {
+        "heading": "Structure",
+        "body": [
+          "I compared design concepts on mechanical performance, material selection and manufacturing feasibility, and checked structural integrity and design margins with hand calculations. I ran CFD on the instrument design to assess its flow behaviour in the underwater environment."
+        ]
+      },
+      {
+        "heading": "Power",
+        "body": [
+          "For the power system I compared six battery chemistries on energy density, power density, temperature range and cycle life, then sized a 7Ah lithium polymer pack.",
+          "I designed the battery management circuit with overcharge, deep-discharge, short-circuit and thermal protection, and calculated a mission runtime of 8.2 hours."
+        ]
+      }
+    ],
+    "takeaway": "A design brief becomes clear once every choice is tied to a requirement and a number. Working from the deployment constraints to the battery size made each decision easy to defend.",
+    "evidence": "The project report can be shared on request."
+  },
+  {
+    "slug": "h2ome-mars-settlement",
+    "title": "H2OME: Mars Settlement Siting",
+    "period": "Sep 2026",
+    "course": "GirlsWhoML x PhysicsX Mars City Hackathon, team of three",
+    "track": "ml",
+    "tools": [
+      "Python",
+      "Optimisation",
+      "Gaussian process",
+      "Claude Code",
+      "Cursor"
+    ],
+    "summary": "A closed-loop household energy and water system for Mars, sized site by site, with a Gaussian process model to assess thousands of candidate locations.",
+    "facts": [
+      {
+        "value": "400 kWh",
+        "label": "delivered per sol at 95% reliability, per site"
+      },
+      {
+        "value": "80 + 8",
+        "label": "solar-powered sites around 8 water-mining hubs"
+      },
+      {
+        "value": "55° to 84°",
+        "label": "habitable latitude, extended by hydrogen from the hubs"
+      }
+    ],
+    "cover": 0,
+    "figures": [
+      {
+        "src": "h2ome-1.jpg",
+        "caption": "Settlement layout: 80 sites around 8 water-mining hubs, self-sufficient and hub-supported scenarios (team output)"
+      }
+    ],
+    "links": [
+      {
+        "label": "Code on GitHub",
+        "url": "https://github.com/ChullMotors/mars_hack"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The brief",
+        "body": [
+          "Plan a self-sufficient Mars settlement that closes the loop on energy, water and oxygen. Our team placed 80 solar-powered sites around 8 water-mining hubs."
+        ]
+      },
+      {
+        "heading": "The household unit (my part)",
+        "body": [
+          "I designed the household unit, one closed loop replicated across every site. Solar power runs the home and charges a battery for the night. Shared ice excavation feeds an electrolyser that splits water into oxygen and hydrogen.",
+          "The hydrogen either backs up the home through dust storms via a fuel cell, or reacts with atmospheric CO2 in a Sabatier reactor to give exportable methane and water that returns to the loop."
+        ]
+      },
+      {
+        "heading": "The optimiser (my part)",
+        "body": [
+          "I built the optimiser that sizes each site's solar array and battery to deliver 400 kWh per sol at 95% reliability, based on that site's own conditions rather than one fixed design."
+        ]
+      },
+      {
+        "heading": "The team result",
+        "body": [
+          "My two teammates built a Gaussian process model around the physics simulation, so we could assess thousands of candidate sites. Together we found that pure solar works only up to about 55 degrees latitude, and that hydrogen piped in from the hubs extends habitation to 84 degrees."
+        ]
+      }
+    ],
+    "takeaway": "Sizing every site to its own conditions gave a better answer than copying one design 80 times, and a surrogate model made that search across thousands of sites possible in a hackathon. It was also where I learned to work with AI coding tools, Claude Code and Cursor.",
+    "evidence": "The full code is public in the repository above. My work is the household unit model and the sizing optimiser.",
+    "coverFit": "contain"
+  },
+  {
+    "slug": "hydrogen-burner-cfd",
+    "title": "Zero-Carbon Hydrogen Burner for Domestic Heating",
+    "period": "Sep 2025 to Jun 2026",
+    "course": "Group design project, University of Southampton",
+    "grade": "72%",
+    "track": "simulation",
+    "tools": [
+      "ANSYS Fluent",
+      "RANS k-omega SST",
+      "GRI-Mech 3.0",
+      "CNC machining"
+    ],
+    "summary": "Led a team designing a novel hydrogen burner, and led the CFD model that predicted stable hydrogen combustion when hydrogen testing was not possible.",
+    "facts": [
+      {
+        "value": "8.2 kW",
+        "label": "stable hydrogen combustion predicted, no flashback"
+      },
+      {
+        "value": "2.3M",
+        "label": "cells at mesh independence"
+      },
+      {
+        "value": "0.4",
+        "label": "equivalence ratio of the hydrogen case"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "What I did",
+        "body": [
+          "I led a multidisciplinary team through the full design lifecycle: concept generation, design requirements, prototyping, testing and validation.",
           "I built the CFD model in ANSYS Fluent using RANS k-omega SST turbulence and GRI-Mech 3.0 finite-rate chemistry. Teammates adopted the workflow for their own simulations."
         ]
       },
@@ -29,116 +345,92 @@
           "I also used CNC machining to make prototype components, after evaluating manufacturing processes and joining methods against operating conditions and failure modes."
         ]
       }
-    ]
+    ],
+    "evidence": "Figures to add: Fluent flame contours, the mesh, and photos of the machined prototype."
   },
   {
-    "slug": "naca0012-rans",
-    "title": "NACA 0012 Airfoil RANS Analysis",
-    "period": "Sep 2025 to Jan 2026",
-    "track": "simulation",
-    "tools": ["ANSYS Fluent", "RNG k-epsilon", "Spalart-Allmaras", "Mesh adaption"],
-    "summary": "A 2D steady RANS study from -11 to +15 degrees angle of attack, validated against NASA data, with a clear account of where and why drag disagreed.",
-    "sections": [
-      {
-        "heading": "What I did",
-        "body": [
-          "I ran lift and drag polars across the angle-of-attack range and estimated near-stall behaviour at about 14.5 degrees. The project was graded 80%."
-        ]
-      },
-      {
-        "heading": "Method",
-        "body": [
-          "I chose turbulence models against the near-wall resolution: RNG k-epsilon with wall functions on the coarse mesh, then Spalart-Allmaras once Fluent's Adapt function had resolved the viscous sublayer.",
-          "I checked Reynolds number similarity by scaling geometry and fluid properties together, and the non-dimensional coefficients held to within 0.6%."
-        ]
-      },
-      {
-        "heading": "Result",
-        "body": [
-          "Lift matched NASA experimental data to within 1.6% and was stable to within 0.2% under grid refinement.",
-          "Drag shifted 25% with refinement because of near-wall sensitivity, and I gave three evidence-based reasons for the larger drag discrepancy against experiment."
-        ]
-      },
-      {
-        "heading": "Planned follow-up",
-        "body": [
-          "Repeat the study in SU2 or OpenFOAM and compare the open-source results with Fluent. This is the first project on the simulation track."
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "h2ome-mars-settlement",
-    "title": "H2OME: Mars Settlement Siting",
-    "period": "Sep 2026",
-    "track": "ml",
-    "tools": ["Python", "Optimisation", "Gaussian process", "Claude Code", "Cursor"],
-    "summary": "A hackathon entry (GirlsWhoML x PhysicsX) that sized a closed-loop household energy and water system and assessed candidate Mars sites with a Gaussian process model.",
-    "sections": [
-      {
-        "heading": "What I did",
-        "body": [
-          "In a team of three I designed the household unit for a Mars settlement: solar power, battery storage, water electrolysis, a hydrogen fuel cell and a Sabatier reactor that recycles water.",
-          "I built an optimiser that sizes each site's solar array and battery to deliver 400 kWh per sol at 95% reliability, based on that site's own conditions rather than one fixed design."
-        ]
-      },
-      {
-        "heading": "Team result",
-        "body": [
-          "With two teammates I built a Gaussian process model to assess thousands of candidate sites across 80 locations and 8 water-mining hubs. It found that hydrogen from the hubs extends habitation from about 55 to 84 degrees latitude."
-        ]
-      },
-      {
-        "heading": "What I learned",
-        "body": [
-          "This was where I learned to work with AI coding tools, Claude Code and Cursor, to speed up iteration on the simulation workflow."
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "battery-digital-twin",
-    "title": "Battery Manufacturing Digital Twin",
-    "period": "Feb 2026 to Apr 2026",
+    "slug": "siemens-simulation-automation",
+    "title": "Simulation Software Automation at Siemens DISW",
+    "period": "Jul 2024 to Aug 2025",
+    "course": "Software Engineering Intern, Simcenter FLOEFD",
     "track": "software",
-    "tools": ["Python", "Statistical validation", "Industry 4.0"],
-    "summary": "A Python digital twin of an automotive battery production line, validated against experimental data to judge how far a virtual replica can be trusted.",
+    "tools": [
+      "Python",
+      "C++",
+      "VBA",
+      "PyTorch",
+      "Teamcenter"
+    ],
+    "summary": "Quality assurance and automation for a CFD and FEA simulation platform used for electronics thermal management.",
+    "facts": [
+      {
+        "value": "7 days",
+        "label": "of engineering time saved per release cycle"
+      },
+      {
+        "value": "5",
+        "label": "CAD software tools covered by QA"
+      }
+    ],
     "sections": [
       {
-        "heading": "What I did",
+        "heading": "The role",
         "body": [
-          "I built a Python digital twin to analyse efficiency and operational performance across the production supply chain. The project was graded 82%.",
-          "I built the bill of materials for the line and analysed facility layouts using Industry 4.0 and continuous improvement principles, along with automation strategies to improve throughput."
+          "On my placement I worked on quality assurance for Simcenter FLOEFD, a CFD and FEA simulation platform used for electronics thermal management, across five CAD software tools. I analysed simulation outputs and applied QA and QC procedures to validate performance in an agile team."
         ]
       },
       {
-        "heading": "Validation",
+        "heading": "Automation",
         "body": [
-          "Twin outputs were compared with experimental data using statistical analysis, to evaluate the accuracy and limits of virtual replication and support data-driven decisions on process improvement."
+          "I built Python, C++ and VBA automation tools, including machine learning libraries such as PyTorch, to remove repetitive engineering workflows. They saved seven days of engineering time per release cycle.",
+          "I also wrote technical documentation that turned complex fluid simulation findings into plain language for specialist and non-specialist readers."
+        ]
+      },
+      {
+        "heading": "What I can share",
+        "body": [
+          "The code is Siemens property, so it is not published here. I am happy to talk through the problem, the approach and the result in a conversation."
         ]
       }
-    ]
+    ],
+    "takeaway": "Automation earns its place when it is tied to a measurable saving. Knowing the release process well enough to find what to automate came from doing the QA work first.",
+    "evidence": "Not shareable, as the work is proprietary to Siemens."
   },
   {
     "slug": "heat-sink-optimisation",
     "title": "Heat Sink Performance Optimisation",
-    "period": "Feb 2024 to Apr 2024",
+    "period": "Feb to Apr 2024",
+    "course": "University of Southampton",
+    "grade": "94%",
     "track": "design",
-    "tools": ["ANSYS", "MATLAB", "Parametric modelling"],
+    "tools": [
+      "ANSYS",
+      "MATLAB",
+      "Parametric modelling"
+    ],
     "summary": "A multi-physics study of heat transfer, flow and thermal stress across heat sink configurations, with hand calculations checking the simulations.",
+    "facts": [
+      {
+        "value": "94%",
+        "label": "grade"
+      },
+      {
+        "value": "3",
+        "label": "physics coupled: heat transfer, flow, thermal stress"
+      }
+    ],
     "sections": [
       {
         "heading": "What I did",
         "body": [
-          "I designed and analysed multi-physics models in ANSYS and MATLAB to evaluate heat transfer, flow behaviour and thermal stress across heat sink configurations. The project was graded 94%.",
+          "I designed and analysed multi-physics models in ANSYS and MATLAB to evaluate heat transfer, flow behaviour and thermal stress across heat sink configurations.",
           "I used parametric modelling and optimisation to weigh structural against thermal trade-offs, validating each decision against performance targets."
         ]
       },
       {
         "heading": "Checks",
         "body": [
-          "Hand calculations supported the simulation findings and confirmed design margins across the configurations.",
-          "This connects directly to my Siemens work on electronics thermal management in Simcenter FLOEFD."
+          "Hand calculations supported the simulation findings and confirmed design margins across the configurations. This connects directly to my Siemens work on electronics thermal management in Simcenter FLOEFD."
         ]
       },
       {
@@ -147,6 +439,7 @@
           "Train a surrogate model on this design space and report its error against the full simulation. This is the first project on the engineering and machine learning track."
         ]
       }
-    ]
+    ],
+    "evidence": "Figures to add: temperature and stress contours for the configurations."
   }
 ]

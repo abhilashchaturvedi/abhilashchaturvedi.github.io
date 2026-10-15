@@ -2,6 +2,19 @@
   "name": "Abhilash Chaturvedi",
   "tagline": "MEng Mechanical Engineer. Simulation, automation and design.",
   "intro": "I am a First Class MEng Mechanical Engineering graduate from the University of Southampton. I spent a year at Siemens DISW testing and automating a CFD and FEA simulation platform, and my degree projects covered combustion CFD, aerodynamics, thermal design and digital twins. This site collects that work and the new projects I am building to widen my skills.",
+  "location": "Southampton, UK",
+  "stats": [
+    { "value": "First Class", "label": "MEng Mechanical Engineering, Southampton" },
+    { "value": "13 months", "label": "Siemens DISW placement, simulation QA and automation" },
+    { "value": "7 days", "label": "engineering time saved per release cycle" },
+    { "value": "1.6%", "label": "CFD lift error against NASA data" }
+  ],
+  "skills": [
+    { "group": "Simulation", "items": ["ANSYS Fluent", "CFD", "FEA", "RANS turbulence modelling", "Mesh independence", "Validation and verification"] },
+    { "group": "Programming and data", "items": ["Python", "C and C++", "MATLAB and Simulink", "VBA", "PyTorch", "OpenCV"] },
+    { "group": "Design and manufacture", "items": ["CATIA V5", "SolidWorks", "Siemens NX", "CNC machining", "Arduino", "One Click LCA"] },
+    { "group": "Ways of working", "items": ["QA and QC", "Technical documentation", "Agile teams", "Teamcenter PLM", "Claude Code and Cursor"] }
+  ],
   "email": "abhilashchaturvedi03@gmail.com",
   "linkedin": "https://www.linkedin.com/in/abhilashc2003/",
   "github": "",
