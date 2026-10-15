@@ -1,16 +1,12 @@
 {
   "name": "Abhilash Chaturvedi",
   "role": "Mechanical Engineer",
-  "location": "Southampton, UK",
+  "location": "London, UK",
   "baseUrl": "",
   "tagline": "Mechanical engineer working in simulation, design and automation. I check every model against real data, and say where it falls short.",
-  "intro": "First Class MEng graduate from the University of Southampton, with a 13-month placement at Siemens DISW testing and automating the Simcenter FLOEFD CFD and FEA platform. My projects cover hydrogen combustion CFD, airfoil aerodynamics, a wind tunnel pitch mechanism I designed and built, and a digital twin of a battery production line.",
+  "intro": "First Class MEng graduate from the University of Southampton, with a 13-month placement at Siemens DISW testing and automating the Simcenter FLOEFD CFD platform across two software releases. My projects cover hydrogen combustion CFD, airfoil aerodynamics, CPU heat sink design in COMSOL, and a wind tunnel pitch mechanism I designed and built.",
   "availability": "Open to graduate mechanical, CFD and simulation roles across the UK. No visa sponsorship needed.",
-  "heroImage": {
-    "src": "burner-shroud.jpg",
-    "caption": "Hydrogen burner prototype with its quartz shroud at 10 kW (group design project)"
-  },
-  "ogImage": "burner-flame.jpg",
+  "ogImage": "headshot.jpg",
   "email": "abhilashchaturvedi03@gmail.com",
   "linkedin": "https://www.linkedin.com/in/abhilashc2003/",
   "github": "",
@@ -38,7 +34,7 @@
       "place": "London",
       "title": "Software Engineering Intern",
       "period": "Jul 2024 to Aug 2025",
-      "text": "QA for Simcenter FLOEFD, a CFD and FEA platform for electronics thermal management, across five CAD tools. Built Python, C++ and VBA automation, including PyTorch, that saved seven days of engineering time per release cycle.",
+      "text": "QA across two Simcenter FLOEFD releases (2412 and 2506), owning the EDA Bridge and Component Explorer test areas for electronics thermal management. Caught a critical defect before release, and built Python, C++ and VBA automation that saved seven days of engineering time per release cycle.",
       "link": "projects/siemens-simulation-automation.html"
     },
     {
@@ -83,12 +79,14 @@
       "group": "Simulation",
       "items": [
         "ANSYS Fluent",
+        "COMSOL Multiphysics",
         "CFD",
         "FEA and modal analysis",
         "RANS turbulence modelling",
         "Finite-rate chemistry",
         "Mesh independence",
-        "Verification and validation"
+        "Verification and validation",
+        "Transient thermal analysis"
       ]
     },
     {
@@ -164,5 +162,6 @@
         "CNC or 3D-printed prototype documented from CAD to finished part"
       ]
     }
-  ]
+  ],
+  "photo": "headshot.jpg"
 }

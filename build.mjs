@@ -27,7 +27,7 @@ for (const f of readdirSync('content/images')) {
   }
 }
 
-const used = new Set([site.heroImage.src, site.ogImage]);
+const used = new Set([site.photo, site.ogImage]);
 const allFigures = (p) => [p.hero, ...p.sections.flatMap((s) => s.figures ?? [])].filter(Boolean);
 for (const p of projects) {
   for (const f of allFigures(p)) {
@@ -69,7 +69,7 @@ const personLd = {
   name: site.name,
   jobTitle: site.role,
   email: `mailto:${site.email}`,
-  address: { '@type': 'PostalAddress', addressLocality: 'Southampton', addressCountry: 'GB' },
+  address: { '@type': 'PostalAddress', addressLocality: 'London', addressCountry: 'GB' },
   alumniOf: { '@type': 'CollegeOrUniversity', name: 'University of Southampton' },
   sameAs: [site.linkedin, site.github].filter(Boolean),
   ...(base && { url: `${base}/` }),
@@ -162,16 +162,18 @@ writeFileSync('dist/index.html', page({
   description: site.tagline,
   path: '',
   ld: personLd,
-  body: `<section class="hero"><div class="wrap hero-grid">
-  <div>
-    <p class="eyebrow">${esc(site.role)} · ${esc(site.location)}</p>
-    <h1>${esc(site.name)}</h1>
-    <p class="lead">${esc(site.tagline)}</p>
-    <p class="intro">${esc(site.intro)}</p>
-    <p class="avail"><span class="dot" aria-hidden="true"></span>${esc(site.availability)}</p>
-    <p class="actions"><a class="btn primary" href="#projects">See my projects</a><a class="btn" href="mailto:${esc(site.email)}">Get in touch</a></p>
+  body: `<section class="hero"><div class="wrap">
+  <div class="id">
+    ${img(site.photo, `Photo of ${site.name}`, '', { lazy: false, cls: 'avatar' })}
+    <div>
+      <p class="eyebrow">${esc(site.role)} · ${esc(site.location)}</p>
+      <h1>${esc(site.name)}</h1>
+    </div>
   </div>
-  <figure class="hero-img">${img(site.heroImage.src, site.heroImage.caption, '', { lazy: false })}<figcaption>${esc(site.heroImage.caption)}</figcaption></figure>
+  <p class="lead">${esc(site.tagline)}</p>
+  <p class="intro">${esc(site.intro)}</p>
+  <p class="avail"><span class="dot" aria-hidden="true"></span>${esc(site.availability)}</p>
+  <p class="actions"><a class="btn primary" href="#projects">See my projects</a><a class="btn" href="mailto:${esc(site.email)}">Get in touch</a></p>
 </div>
 <div class="wrap"><ul class="stats">${site.stats.map((s) => `<li><strong>${esc(s.value)}</strong><span>${esc(s.label)}</span></li>`).join('')}</ul></div>
 </section>

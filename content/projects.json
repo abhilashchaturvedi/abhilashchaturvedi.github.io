@@ -8,14 +8,32 @@
     "role": "Team of five. I led the team through the design lifecycle and led the CFD model.",
     "track": "simulation",
     "featured": true,
-    "tools": ["ANSYS Fluent", "RANS k-omega SST", "GRI-Mech 3.0", "Polyhedral meshing", "CNC machining"],
+    "tools": [
+      "ANSYS Fluent",
+      "RANS k-omega SST",
+      "GRI-Mech 3.0",
+      "Polyhedral meshing",
+      "CNC machining"
+    ],
     "summary": "A perforated plate burner that runs on methane and hydrogen: designed, built and fire-tested, with a CFD model that diagnosed a flame problem in the lab and predicted hydrogen performance.",
     "facts": [
-      { "value": "8.2 kW", "label": "hydrogen combustion predicted at equivalence ratio 0.4, no flashback" },
-      { "value": "4.8%", "label": "CFD pressure drop against theory (56.95 Pa vs 59.82 Pa)" },
-      { "value": "2.3M", "label": "polyhedral cells at mesh independence" }
+      {
+        "value": "8.2 kW",
+        "label": "hydrogen combustion predicted at equivalence ratio 0.4, no flashback"
+      },
+      {
+        "value": "4.8%",
+        "label": "CFD pressure drop against theory (56.95 Pa vs 59.82 Pa)"
+      },
+      {
+        "value": "2.3M",
+        "label": "polyhedral cells at mesh independence"
+      }
     ],
-    "hero": { "src": "burner-flame.jpg", "caption": "The burner under methane test" },
+    "hero": {
+      "src": "burner-flame.jpg",
+      "caption": "The burner under methane test"
+    },
     "sections": [
       {
         "heading": "The brief",
@@ -23,7 +41,10 @@
           "Domestic heating, mostly from natural gas boilers, accounted for 18% of UK greenhouse gas emissions in 2021. The brief was a perforated plate burner able to run on both methane and hydrogen, delivering 10 kW with a 5:1 turn-down ratio to match existing domestic boilers."
         ],
         "figures": [
-          { "src": "burner-exploded.jpg", "caption": "Exploded view of the final design: inlet pipe, plenum, perforated plate and ignition mount" }
+          {
+            "src": "burner-exploded.jpg",
+            "caption": "Exploded view of the final design: inlet pipe, plenum, perforated plate and ignition mount"
+          }
         ]
       },
       {
@@ -32,8 +53,14 @@
           "I led the team from concept generation and design requirements through prototyping, testing and validation. I evaluated manufacturing processes and joining methods against operating conditions and failure modes, and used CNC machining to make prototype components."
         ],
         "figures": [
-          { "src": "burner-rig.jpg", "caption": "Assembled burner with ignition system on the test rig" },
-          { "src": "burner-stability.jpg", "caption": "Blowout stability map from the team's tests: stable region shaded, design point marked" }
+          {
+            "src": "burner-rig.jpg",
+            "caption": "Assembled burner with ignition system on the test rig"
+          },
+          {
+            "src": "burner-stability.jpg",
+            "caption": "Blowout stability map from the team's tests: stable region shaded, design point marked"
+          }
         ]
       },
       {
@@ -43,7 +70,10 @@
           "As a first check, the predicted pressure drop across the plate (56.95 Pa) came within 4.8% of the theoretical value (59.82 Pa)."
         ],
         "figures": [
-          { "src": "burner-mesh.jpg", "caption": "Polyhedral mesh of the burner's internal volume, with local refinement and inflation layers" }
+          {
+            "src": "burner-mesh.jpg",
+            "caption": "Polyhedral mesh of the burner's internal volume, with local refinement and inflation layers"
+          }
         ]
       },
       {
@@ -52,7 +82,10 @@
           "Cold-flow velocities through the plate followed the measured radial trend, including the dip at the centre, but over-predicted absolute values by 34.4% on average. RANS time-averaging of the unstable jet shear layers and pitot probe placement explain most of that gap, so the model was used for trends and flame behaviour rather than absolute velocity."
         ],
         "figures": [
-          { "src": "burner-cold-flow.jpg", "caption": "Radial velocity through the plate: experiment (solid) against CFD (dashed) across eight flow rates" }
+          {
+            "src": "burner-cold-flow.jpg",
+            "caption": "Radial velocity through the plate: experiment (solid) against CFD (dashed) across eight flow rates"
+          }
         ]
       },
       {
@@ -61,9 +94,18 @@
           "In the reactive tests the outer three rings of holes would not light. The methane model reproduced this: OH and temperature fields showed ambient air diluting the mixture at the edge of the plate. That finding led to a quartz shroud, which gave a uniform flame across every hole."
         ],
         "figures": [
-          { "src": "burner-ch4-temperature.jpg", "caption": "Methane: temperature above the plate, cooler over the outer holes" },
-          { "src": "burner-oh-plane.jpg", "caption": "OH mass fraction 1 mm above the plate; low OH marks the unlit outer rings" },
-          { "src": "burner-shroud.jpg", "caption": "With the shroud fitted: flame across every hole at 10 kW" }
+          {
+            "src": "burner-ch4-temperature.jpg",
+            "caption": "Methane: temperature above the plate, cooler over the outer holes"
+          },
+          {
+            "src": "burner-oh-plane.jpg",
+            "caption": "OH mass fraction 1 mm above the plate; low OH marks the unlit outer rings"
+          },
+          {
+            "src": "burner-shroud.jpg",
+            "caption": "With the shroud fitted: flame across every hole at 10 kW"
+          }
         ]
       },
       {
@@ -73,7 +115,10 @@
           "It predicted stable combustion at 8.2 kW and equivalence ratio 0.4 with no flashback. Predicted flames were about 2.4 mm tall against 3.6 mm for methane, consistent with hydrogen's much higher flame speed."
         ],
         "figures": [
-          { "src": "burner-h2-temperature.jpg", "caption": "Hydrogen: predicted temperature field above the plate" }
+          {
+            "src": "burner-h2-temperature.jpg",
+            "caption": "Hydrogen: predicted temperature field above the plate"
+          }
         ]
       }
     ],
@@ -88,14 +133,31 @@
     "role": "Individual project.",
     "track": "simulation",
     "featured": true,
-    "tools": ["ANSYS Fluent", "RNG k-epsilon", "Spalart-Allmaras", "Mesh adaption"],
+    "tools": [
+      "ANSYS Fluent",
+      "RNG k-epsilon",
+      "Spalart-Allmaras",
+      "Mesh adaption"
+    ],
     "summary": "A 2D steady RANS study from -11 to +15 degrees angle of attack, matched to NASA data on lift, with a clear account of why drag disagreed.",
     "facts": [
-      { "value": "1.6%", "label": "lift coefficient error against NASA experiment" },
-      { "value": "0.2%", "label": "lift change between meshes, while drag moved 25%" },
-      { "value": "14.5°", "label": "estimated near-stall angle of attack" }
+      {
+        "value": "1.6%",
+        "label": "lift coefficient error against NASA experiment"
+      },
+      {
+        "value": "0.2%",
+        "label": "lift change between meshes, while drag moved 25%"
+      },
+      {
+        "value": "14.5°",
+        "label": "estimated near-stall angle of attack"
+      }
     ],
-    "hero": { "src": "naca-1.jpg", "caption": "Pressure coefficient contour" },
+    "hero": {
+      "src": "naca-1.jpg",
+      "caption": "Pressure coefficient contour"
+    },
     "sections": [
       {
         "heading": "What I did",
@@ -109,7 +171,10 @@
           "I chose the turbulence model from a y+ estimate rather than by default. The first cells sat in the buffer layer, so I used RNG k-epsilon with wall functions on the coarse mesh. After refining the mesh with Fluent's Adapt function to reach y+ of about 2.9, I switched to Spalart-Allmaras."
         ],
         "figures": [
-          { "src": "naca-2.jpg", "caption": "Adapted mesh near the leading edge" }
+          {
+            "src": "naca-2.jpg",
+            "caption": "Adapted mesh near the leading edge"
+          }
         ]
       },
       {
@@ -125,7 +190,10 @@
           "Reynolds-similarity scaling, with geometry and fluid properties scaled together, preserved the coefficients to within 0.6%."
         ],
         "figures": [
-          { "src": "naca-3.jpg", "caption": "Pressure coefficient: CFD against experimental data" }
+          {
+            "src": "naca-3.jpg",
+            "caption": "Pressure coefficient: CFD against experimental data"
+          }
         ]
       },
       {
@@ -146,14 +214,33 @@
     "role": "Individual project: mechanism design, electronics, control code, FEA, build and wind tunnel testing.",
     "track": "design",
     "featured": true,
-    "tools": ["SolidWorks", "ANSYS Mechanical", "Arduino", "PI control", "MATLAB", "3D printing"],
+    "tools": [
+      "SolidWorks",
+      "ANSYS Mechanical",
+      "Arduino",
+      "PI control",
+      "MATLAB",
+      "3D printing"
+    ],
     "summary": "A low-cost rig that sets a model's angle of attack inside the wind tunnel, using two linear actuators under PI control with IMU feedback. Designed, analysed, built and tested on a £110 budget.",
     "facts": [
-      { "value": "£100.20", "label": "total build cost against a £110 budget" },
-      { "value": "5.3x", "label": "margin on natural frequency, against a requirement of 2" },
-      { "value": "1.74%", "label": "blockage ratio, under the 5% limit" }
+      {
+        "value": "£100.20",
+        "label": "total build cost against a £110 budget"
+      },
+      {
+        "value": "5.3x",
+        "label": "margin on natural frequency, against a requirement of 2"
+      },
+      {
+        "value": "1.74%",
+        "label": "blockage ratio, under the 5% limit"
+      }
     ],
-    "hero": { "src": "pitch-installed.jpg", "caption": "Installed in the wind tunnel, holding a cylinder at 30° angle of attack" },
+    "hero": {
+      "src": "pitch-installed.jpg",
+      "caption": "Installed in the wind tunnel, holding a cylinder at 30° angle of attack"
+    },
     "sections": [
       {
         "heading": "The brief",
@@ -161,7 +248,10 @@
           "Experimental aerodynamics research at Southampton needed a stable, repeatable way to change a model's angle of attack. The target was angles up to 30° at different vertical positions in the test section, within a £110 budget."
         ],
         "figures": [
-          { "src": "pitch-sketch.jpg", "caption": "Early concept sketch" }
+          {
+            "src": "pitch-sketch.jpg",
+            "caption": "Early concept sketch"
+          }
         ]
       },
       {
@@ -170,7 +260,10 @@
           "Two linear actuators extend by different amounts to tilt a plate carrying the model. I mapped the maximum angle against actuator extension and spacing to choose the geometry, then checked the sensor's ±1.5° accuracy against that spacing with a relative error analysis."
         ],
         "figures": [
-          { "src": "pitch-design-space.jpg", "caption": "Maximum angle of attack against half actuator extension and actuator spacing" }
+          {
+            "src": "pitch-design-space.jpg",
+            "caption": "Maximum angle of attack against half actuator extension and actuator spacing"
+          }
         ]
       },
       {
@@ -180,8 +273,14 @@
           "A PI controller closes the loop on the IMU reading. I raised the integral gain until instability appeared, settling at 0.003. Measured step responses to 10° and 30° showed clear PI behaviour with a time constant of about 4 seconds; the actuators' constant extension speed is what limits it."
         ],
         "figures": [
-          { "src": "pitch-control-box.jpg", "caption": "Control box: Arduino, motor driver and load cell amplifier" },
-          { "src": "pitch-response.jpg", "caption": "Step response to 30°: measured against a first-order analytical model" }
+          {
+            "src": "pitch-control-box.jpg",
+            "caption": "Control box: Arduino, motor driver and load cell amplifier"
+          },
+          {
+            "src": "pitch-response.jpg",
+            "caption": "Step response to 30°: measured against a first-order analytical model"
+          }
         ]
       },
       {
@@ -191,8 +290,14 @@
           "The first six natural frequencies, from 53 Hz to 225 Hz, sit well clear of the wind tunnel's excitation range: a margin of 5.3 against a design requirement of 2."
         ],
         "figures": [
-          { "src": "pitch-stress.jpg", "caption": "Equivalent stress under the drag load" },
-          { "src": "pitch-mode1.jpg", "caption": "First mode shape, 53.24 Hz" }
+          {
+            "src": "pitch-stress.jpg",
+            "caption": "Equivalent stress under the drag load"
+          },
+          {
+            "src": "pitch-mode1.jpg",
+            "caption": "First mode shape, 53.24 Hz"
+          }
         ]
       },
       {
@@ -201,7 +306,10 @@
           "Mounts and actuator sleeves were 3D printed in PLA at 60% infill, with 6 mm plywood support plates fixed to the tunnel's top panel with T-nuts. The total came to £100.20."
         ],
         "figures": [
-          { "src": "pitch-actuators.jpg", "caption": "Actuators assembled on the upper plate" }
+          {
+            "src": "pitch-actuators.jpg",
+            "caption": "Actuators assembled on the upper plate"
+          }
         ]
       },
       {
@@ -221,6 +329,117 @@
     "evidence": "The individual project report (10,400 words) can be shared on request."
   },
   {
+    "slug": "cpu-heat-sink-comsol",
+    "title": "CPU Heat Sink Design and Fin Optimisation",
+    "period": "Feb to Mar 2024",
+    "context": "SESM3032 Heat Transfer coursework, University of Southampton",
+    "grade": "94%",
+    "role": "Individual coursework.",
+    "track": "simulation",
+    "tools": [
+      "COMSOL Multiphysics",
+      "Parametric sweeps",
+      "Transient thermal",
+      "Symmetry reduction"
+    ],
+    "summary": "Fin optimisation in COMSOL, then a copper pin-fin heat sink for a 60 W CPU, iterated until it held 70°C, with a transient study and a throttling strategy for an overclocked load.",
+    "facts": [
+      {
+        "value": "342 K",
+        "label": "peak CPU temperature at 60 W, under the 343 K (70°C) limit"
+      },
+      {
+        "value": "62.47 W",
+        "label": "maximum steady load the final design holds below 70°C"
+      },
+      {
+        "value": "75 W",
+        "label": "overclocked load run in 30 s bursts, alternating with half load to recover"
+      }
+    ],
+    "hero": {
+      "src": "heatsink-temperature.jpg",
+      "caption": "Temperature field in the quarter-symmetry heat sink model"
+    },
+    "sections": [
+      {
+        "heading": "Starting with a single fin",
+        "body": [
+          "I modelled a tapered radial fin in 2D axisymmetry and compared its temperature profile with the analytical plate fin solution. The two differ because the tapered fin’s cross-section changes along its length, which the plate fin equation does not capture.",
+          "Iterating length and thickness, then switching from aluminium to copper, raised fin effectiveness from 8.2 to 47.7 while keeping efficiency near 98%. A parametric sweep over thickness then found the shape for maximum heat transfer."
+        ],
+        "figures": [
+          {
+            "src": "heatsink-radial-fin.jpg",
+            "caption": "Tapered radial fin: 3D temperature distribution"
+          },
+          {
+            "src": "heatsink-fin-array.jpg",
+            "caption": "Array of optimised fins on a tube condensing saturated steam"
+          }
+        ]
+      },
+      {
+        "heading": "Fin array on a steam tube",
+        "body": [
+          "An array of the optimised fins on a tube condensing saturated steam transferred 4.26 kW for an 80 mm tube, rising to 4.40 kW at 160 mm, with condensation rates from 1.88 to 1.95 g/s."
+        ]
+      },
+      {
+        "heading": "Sizing the CPU heat sink",
+        "body": [
+          "For the CPU, a Newton’s law of cooling estimate showed the heat transfer coefficient a bare chip would need, which made the case for a heat spreader with fins.",
+          "A parametric sweep on a copper square pin fin with a fixed 120 mm³ volume gave an optimum of 1.9 mm by 31 mm, carrying 0.75 W each. That pointed to about 80 fins for a 60 W load, on a 30 mm radius spreader."
+        ],
+        "figures": [
+          {
+            "src": "heatsink-pin-sweep.jpg",
+            "caption": "Heat transfer per pin fin against fin thickness, at fixed volume"
+          },
+          {
+            "src": "heatsink-model.jpg",
+            "caption": "Pin-fin array on a round heat spreader"
+          }
+        ]
+      },
+      {
+        "heading": "Iterating to the limit",
+        "body": [
+          "I cut the model to a quarter using symmetry, which brought solve times down to about 15 seconds, and put a probe at the hottest point above the CPU die. A sweep on spreader thickness set it at 5 mm, balancing temperature against material.",
+          "The first design reached 359 K at 60 W, well over the 343 K limit. More fins helped with diminishing returns (112 fins gave 350.45 K, 164 gave 347.14 K), so instead I raised the heat transfer coefficient to 100 W/m²K to reflect fan cooling. With 112 fins that gave 342 K, and the design holds the limit up to 62.47 W."
+        ],
+        "figures": [
+          {
+            "src": "heatsink-quarter.jpg",
+            "caption": "Quarter model mesh, using symmetry to cut solve time"
+          },
+          {
+            "src": "heatsink-qmax.jpg",
+            "caption": "Peak temperature against CPU load for the final design"
+          }
+        ]
+      },
+      {
+        "heading": "Transient behaviour and throttling",
+        "body": [
+          "A 200-second transient study at 60 W, 62.47 W and 65 W showed a time constant of about 140 seconds before the sink settles.",
+          "For an overclocked CPU, I modelled a periodic load: 75 W (1.2 times the maximum) for 30 seconds, the time it takes to approach the limit, then half load to recover. Peak temperature stays within 343 K, so the CPU can run overclocked for as long as possible without overheating."
+        ],
+        "figures": [
+          {
+            "src": "heatsink-transient.jpg",
+            "caption": "Transient warm-up at 60 W"
+          },
+          {
+            "src": "heatsink-throttle.jpg",
+            "caption": "Dynamic load: peak temperature under the throttling cycle"
+          }
+        ]
+      }
+    ],
+    "evidence": "The coursework report can be shared on request."
+  },
+  {
     "slug": "battery-digital-twin",
     "title": "Battery Manufacturing Digital Twin and Life Cycle Assessment",
     "period": "Feb to Apr 2026",
@@ -228,14 +447,32 @@
     "grade": "82%",
     "role": "Individual coursework.",
     "track": "software",
-    "tools": ["Python", "OpenCV", "Quanser QArm", "QLabs", "ISO 14040 LCA"],
+    "tools": [
+      "Python",
+      "OpenCV",
+      "Quanser QArm",
+      "QLabs",
+      "ISO 14040 LCA"
+    ],
     "summary": "A digital twin of a battery cell-finishing station, checked against lab hardware, then extended into a facility layout and a life cycle assessment.",
     "facts": [
-      { "value": "23.7%", "label": "of demand met by one arm (42,092 of 177,500 cells a year)" },
-      { "value": "2x", "label": "output from a dual-arm layout (84,184 cells a year)" },
-      { "value": "93.6%", "label": "energy under-prediction found by testing the twin against hardware" }
+      {
+        "value": "23.7%",
+        "label": "of demand met by one arm (42,092 of 177,500 cells a year)"
+      },
+      {
+        "value": "2x",
+        "label": "output from a dual-arm layout (84,184 cells a year)"
+      },
+      {
+        "value": "93.6%",
+        "label": "energy under-prediction found by testing the twin against hardware"
+      }
     ],
-    "hero": { "src": "battery-1.jpg", "caption": "Dual-arm cell-finishing station in the digital twin" },
+    "hero": {
+      "src": "battery-1.jpg",
+      "caption": "Dual-arm cell-finishing station in the digital twin"
+    },
     "sections": [
       {
         "heading": "The problem",
@@ -250,7 +487,10 @@
           "From the sorting cycle time and failure downtime, I estimated single-arm throughput at 42,092 cells per year against a demand of 177,500. That is 23.7% of the requirement, so the station is the bottleneck. A dual-arm layout doubles output to 84,184 cells per year."
         ],
         "figures": [
-          { "src": "battery-dual-arm.jpg", "caption": "Dual-arm configuration in operation" }
+          {
+            "src": "battery-dual-arm.jpg",
+            "caption": "Dual-arm configuration in operation"
+          }
         ]
       },
       {
@@ -267,8 +507,14 @@
           "An ISO 14040 life cycle assessment then compared LFP, sodium-ion and diesel and gasoline vehicle propulsion."
         ],
         "figures": [
-          { "src": "battery-2.jpg", "caption": "Facility layout with exclusion zones" },
-          { "src": "battery-3.jpg", "caption": "Weighted LCA impacts: diesel, gasoline, LFP and sodium-ion" }
+          {
+            "src": "battery-2.jpg",
+            "caption": "Facility layout with exclusion zones"
+          },
+          {
+            "src": "battery-3.jpg",
+            "caption": "Weighted LCA impacts: diesel, gasoline, LFP and sodium-ion"
+          }
         ]
       }
     ],
@@ -283,14 +529,32 @@
     "grade": "75%",
     "role": "Team of six. I designed the instrument main body, and worked on battery selection and the battery management circuit.",
     "track": "design",
-    "tools": ["SolidWorks", "FEA", "CFD", "Battery and BMS design", "PCB layout"],
+    "tools": [
+      "SolidWorks",
+      "FEA",
+      "CFD",
+      "Battery and BMS design",
+      "PCB layout"
+    ],
     "summary": "A conductivity, temperature and depth instrument for coral reef monitoring, designed to integrate into an autonomous underwater vehicle, from housing to power system.",
     "facts": [
-      { "value": "7 Ah", "label": "lithium polymer pack, chosen from six chemistries" },
-      { "value": "8.2 h", "label": "calculated mission runtime" },
-      { "value": "4", "label": "battery protections: overcharge, deep discharge, short circuit, thermal" }
+      {
+        "value": "7 Ah",
+        "label": "lithium polymer pack, chosen from six chemistries"
+      },
+      {
+        "value": "8.2 h",
+        "label": "calculated mission runtime"
+      },
+      {
+        "value": "4",
+        "label": "battery protections: overcharge, deep discharge, short circuit, thermal"
+      }
     ],
-    "hero": { "src": "marine-1.jpg", "caption": "Instrument housing with electronics (CAD)" },
+    "hero": {
+      "src": "marine-1.jpg",
+      "caption": "Instrument housing with electronics (CAD)"
+    },
     "sections": [
       {
         "heading": "The brief",
@@ -305,8 +569,14 @@
           "I ran CFD on candidate designs at 1 m/s and 50 m depth to compare their flow behaviour, looking for the lowest pressure change and so the least turbulent flow. Structural FEA under hydrostatic pressure at 30 m and 100 m depth justified the material choice."
         ],
         "figures": [
-          { "src": "marine-cfd.jpg", "caption": "CFD flow over a candidate housing design at 1 m/s" },
-          { "src": "marine-2.jpg", "caption": "Structural FEA under hydrostatic pressure" }
+          {
+            "src": "marine-cfd.jpg",
+            "caption": "CFD flow over a candidate housing design at 1 m/s"
+          },
+          {
+            "src": "marine-2.jpg",
+            "caption": "Structural FEA under hydrostatic pressure"
+          }
         ]
       },
       {
@@ -316,7 +586,10 @@
           "I designed the battery management circuit with overcharge, deep-discharge, short-circuit and thermal protection, and calculated a mission runtime of 8.2 hours."
         ],
         "figures": [
-          { "src": "marine-3.jpg", "caption": "Battery management circuit and PCB layout" }
+          {
+            "src": "marine-3.jpg",
+            "caption": "Battery management circuit and PCB layout"
+          }
         ]
       }
     ],
@@ -330,16 +603,38 @@
     "context": "GirlsWhoML x PhysicsX Mars City Hackathon",
     "role": "Team of three. I built the household unit model and the sizing optimiser.",
     "track": "ml",
-    "tools": ["Python", "Optimisation", "Gaussian process", "Claude Code", "Cursor"],
+    "tools": [
+      "Python",
+      "Optimisation",
+      "Gaussian process",
+      "Claude Code",
+      "Cursor"
+    ],
     "summary": "A closed-loop household energy and water system for Mars, sized site by site, with a Gaussian process model to assess thousands of candidate locations.",
     "facts": [
-      { "value": "400 kWh", "label": "delivered per sol at 95% reliability, per site" },
-      { "value": "80 + 8", "label": "solar-powered sites around 8 water-mining hubs" },
-      { "value": "55° to 84°", "label": "habitable latitude, extended by hydrogen from the hubs" }
+      {
+        "value": "400 kWh",
+        "label": "delivered per sol at 95% reliability, per site"
+      },
+      {
+        "value": "80 + 8",
+        "label": "solar-powered sites around 8 water-mining hubs"
+      },
+      {
+        "value": "55° to 84°",
+        "label": "habitable latitude, extended by hydrogen from the hubs"
+      }
     ],
-    "hero": { "src": "h2ome-1.jpg", "caption": "Settlement layout: 80 sites around 8 water-mining hubs, self-sufficient and hub-supported scenarios (team output)", "fit": "contain" },
+    "hero": {
+      "src": "h2ome-1.jpg",
+      "caption": "Settlement layout: 80 sites around 8 water-mining hubs, self-sufficient and hub-supported scenarios (team output)",
+      "fit": "contain"
+    },
     "links": [
-      { "label": "Code on GitHub", "url": "https://github.com/ChullMotors/mars_hack" }
+      {
+        "label": "Code on GitHub",
+        "url": "https://github.com/ChullMotors/mars_hack"
+      }
     ],
     "sections": [
       {
@@ -373,70 +668,71 @@
   },
   {
     "slug": "siemens-simulation-automation",
-    "title": "Simulation Software Automation at Siemens DISW",
+    "title": "Simulation Software QA and Automation at Siemens DISW",
     "period": "Jul 2024 to Aug 2025",
-    "context": "Software Engineering Intern, Simcenter FLOEFD",
-    "role": "Placement in the FLOEFD QA team.",
+    "context": "Software Engineering Intern, Simcenter FLOEFD QA team",
+    "role": "QA engineer across two release cycles, owning the EDA Bridge and Component Explorer test areas.",
     "track": "software",
-    "tools": ["Python", "C++", "VBA", "PyTorch", "Teamcenter"],
-    "summary": "Quality assurance and automation for a CFD and FEA simulation platform used for electronics thermal management.",
+    "tools": [
+      "Simcenter FLOEFD",
+      "Python",
+      "C++",
+      "VBA",
+      "PyTorch",
+      "JIRA",
+      "Teamcenter"
+    ],
+    "summary": "Quality assurance for a CAD-embedded CFD platform used for electronics thermal management, across two releases, plus automation that saved days per release.",
     "facts": [
-      { "value": "7 days", "label": "of engineering time saved per release cycle" },
-      { "value": "5", "label": "CAD software tools covered by QA" }
+      {
+        "value": "7 days",
+        "label": "of engineering time saved per release cycle"
+      },
+      {
+        "value": "2",
+        "label": "major releases tested end to end (2412 and 2506)"
+      },
+      {
+        "value": "5",
+        "label": "CAD platforms covered by QA"
+      }
     ],
     "sections": [
       {
-        "heading": "The role",
+        "heading": "The product",
         "body": [
-          "I worked on quality assurance for Simcenter FLOEFD, a CFD and FEA simulation platform used for electronics thermal management, across five CAD software tools. I analysed simulation outputs and applied QA and QC procedures to check performance in an agile team, managing priorities through Teamcenter."
+          "Simcenter FLOEFD is a CFD tool embedded in major CAD platforms, used heavily for electronics thermal management. I joined its QA team, testing internal builds before changes merged into the mainline, across five CAD tools."
+        ]
+      },
+      {
+        "heading": "Release 2412: owning a test area",
+        "body": [
+          "After a handover from the outgoing interns, I specialised in EDA Bridge, which imports PCB and IC thermal properties into FLOEFD, and the Component Explorer, which lists component material and thermal data. This deepened my understanding of junction temperature, thermal resistance and power dissipation in simulation setup.",
+          "Late in the cycle I found a critical defect in how component data was displayed, which put simulation integrity at risk. I gave developers detailed reproduction steps, and it was fixed in a service pack after launch."
+        ]
+      },
+      {
+        "heading": "Release 2506: harder problems",
+        "body": [
+          "I tested a fix for an integer overflow in the computation of very high-fidelity meshes. That meant designing test cases with extremely fine meshes, and monitoring solver stability, memory use and the non-zero count of the solver matrices to make sure the failure condition was actually reached.",
+          "I also tested a new version of EDA Bridge, including component swapping and a new project export workflow, checking data integrity between exported and original projects, and ran localisation testing across language packs."
         ]
       },
       {
         "heading": "Automation",
         "body": [
-          "I built Python, C++ and VBA automation tools, including machine learning libraries such as PyTorch, to remove repetitive engineering workflows. They saved seven days of engineering time per release cycle.",
-          "I also wrote technical documentation that turned complex fluid simulation findings into plain language for specialist and non-specialist readers."
+          "I built Python, C++ and VBA automation tools, including machine learning libraries such as PyTorch, that saved seven days of engineering time per release cycle.",
+          "One example: a Python tool that audits CAD installations across the team’s network of machines, reading versions of NX, CATIA V5, Creo and Solid Edge from paths and registry entries. It handles coexisting NX builds and executables shared with Simcenter 3D. The QA team adopted it for system audits."
         ]
       },
       {
-        "heading": "What I can share",
+        "heading": "Working with the team",
         "body": [
-          "The code is Siemens property, so it is not published here. I am happy to talk through the problem, the approach and the result in a conversation."
+          "I worked in agile sprints with developers, product managers and QA engineers, writing bug reports developers could act on and designing test cases around customer workflows. Later in the year I helped onboard newer interns by explaining workflows and reviewing their test cases.",
+          "The code and internal tools are Siemens property, so they are not published here. I am happy to talk through the problems, approach and results in a conversation."
         ]
       }
     ],
     "takeaway": "Automation earns its place when it is tied to a measurable saving. Knowing the release process well enough to find what to automate came from doing the QA work first."
-  },
-  {
-    "slug": "heat-sink-optimisation",
-    "title": "Heat Sink Performance Optimisation",
-    "period": "Feb to Apr 2024",
-    "context": "University of Southampton",
-    "grade": "94%",
-    "role": "Coursework project.",
-    "track": "design",
-    "tools": ["ANSYS", "MATLAB", "Parametric modelling"],
-    "summary": "A multi-physics study of heat transfer, flow and thermal stress across heat sink configurations, with hand calculations checking the simulations.",
-    "sections": [
-      {
-        "heading": "What I did",
-        "body": [
-          "I designed and analysed multi-physics models in ANSYS and MATLAB to evaluate heat transfer, flow behaviour and thermal stress across heat sink configurations.",
-          "I used parametric modelling and optimisation to weigh structural against thermal trade-offs, testing each decision against performance targets."
-        ]
-      },
-      {
-        "heading": "Checks",
-        "body": [
-          "Hand calculations supported the simulation findings and confirmed design margins across the configurations. The same problem, electronics thermal management, was the focus of my Siemens placement on Simcenter FLOEFD."
-        ]
-      },
-      {
-        "heading": "Next",
-        "body": [
-          "Train a surrogate model on this design space and report its error against the full simulation. This is the first project on my engineering and machine learning track."
-        ]
-      }
-    ]
   }
 ]
