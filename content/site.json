@@ -1,28 +1,135 @@
 {
   "name": "Abhilash Chaturvedi",
-  "tagline": "MEng Mechanical Engineer. Simulation, automation and design.",
-  "intro": "I am a First Class MEng Mechanical Engineering graduate from the University of Southampton. I spent a year at Siemens DISW testing and automating a CFD and FEA simulation platform, and my degree projects covered combustion CFD, aerodynamics, thermal design and digital twins. This site collects that work and the new projects I am building to widen my skills.",
+  "role": "Mechanical Engineer",
   "location": "Southampton, UK",
-  "stats": [
-    { "value": "First Class", "label": "MEng Mechanical Engineering, Southampton" },
-    { "value": "13 months", "label": "Siemens DISW placement, simulation QA and automation" },
-    { "value": "7 days", "label": "engineering time saved per release cycle" },
-    { "value": "1.6%", "label": "CFD lift error against NASA data" }
-  ],
-  "skills": [
-    { "group": "Simulation", "items": ["ANSYS Fluent", "CFD", "FEA", "RANS turbulence modelling", "Mesh independence", "Validation and verification"] },
-    { "group": "Programming and data", "items": ["Python", "C and C++", "MATLAB and Simulink", "VBA", "PyTorch", "OpenCV"] },
-    { "group": "Design and manufacture", "items": ["CATIA V5", "SolidWorks", "Siemens NX", "CNC machining", "Arduino", "One Click LCA"] },
-    { "group": "Ways of working", "items": ["QA and QC", "Technical documentation", "Agile teams", "Teamcenter PLM", "Claude Code and Cursor"] }
-  ],
+  "baseUrl": "",
+  "tagline": "Mechanical engineer working in simulation, design and automation. I check every model against real data, and say where it falls short.",
+  "intro": "First Class MEng graduate from the University of Southampton, with a 13-month placement at Siemens DISW testing and automating the Simcenter FLOEFD CFD and FEA platform. My projects cover hydrogen combustion CFD, airfoil aerodynamics, a wind tunnel pitch mechanism I designed and built, and a digital twin of a battery production line.",
+  "availability": "Open to graduate mechanical, CFD and simulation roles across the UK. No visa sponsorship needed.",
+  "heroImage": {
+    "src": "burner-shroud.jpg",
+    "caption": "Hydrogen burner prototype with its quartz shroud at 10 kW (group design project)"
+  },
+  "ogImage": "burner-flame.jpg",
   "email": "abhilashchaturvedi03@gmail.com",
   "linkedin": "https://www.linkedin.com/in/abhilashc2003/",
   "github": "",
+  "stats": [
+    {
+      "value": "First Class",
+      "label": "MEng Mechanical Engineering, Southampton"
+    },
+    {
+      "value": "13 months",
+      "label": "Siemens DISW placement in simulation QA and automation"
+    },
+    {
+      "value": "7 days",
+      "label": "engineering time saved per release cycle by my tools"
+    },
+    {
+      "value": "1.6%",
+      "label": "CFD lift error against NASA wind tunnel data"
+    }
+  ],
+  "experience": [
+    {
+      "org": "Siemens DISW",
+      "place": "London",
+      "title": "Software Engineering Intern",
+      "period": "Jul 2024 to Aug 2025",
+      "text": "QA for Simcenter FLOEFD, a CFD and FEA platform for electronics thermal management, across five CAD tools. Built Python, C++ and VBA automation, including PyTorch, that saved seven days of engineering time per release cycle.",
+      "link": "projects/siemens-simulation-automation.html"
+    },
+    {
+      "org": "Larsen & Toubro",
+      "place": "Vadodara, India",
+      "title": "Mechanical Engineering Intern",
+      "period": "Jul to Sep 2023",
+      "text": "Specified rotating equipment such as pumps and compressors for 15 clients, using CAD and first-principles calculations in MATLAB, and linked technical requirements to each client's operational needs."
+    },
+    {
+      "org": "University of Southampton",
+      "place": "Southampton",
+      "title": "MEng Mechanical Engineering, First Class Honours",
+      "period": "Sep 2021 to Jul 2026",
+      "text": "Top modules: Advanced Computational Methods (95%), Design and Computing (82%), Manufacturing and Supply Chain (82%), Applications of CFD (80%), Sustainable Energy Systems (80%)."
+    }
+  ],
+  "activities": [
+    {
+      "title": "External Event Organiser, Artificial Intelligence Society",
+      "text": "Organised a guest lecture by a Siemens Product Leader on AI and machine learning in engineering, for over 100 students and staff."
+    },
+    {
+      "title": "Chief Design Engineer, Renewable Energy Society",
+      "text": "Designed a solar array and a miniature wind turbine to run a rural household on clean energy."
+    },
+    {
+      "title": "Member, Southampton Formula Student",
+      "text": "Ran CFD in ANSYS Fluent alongside wind tunnel testing to inform aerodynamic design decisions."
+    },
+    {
+      "title": "Eurobot quarter finalist",
+      "text": "Designed and prototyped autonomous robots with motors, Arduino and LiDAR sensors in a multidisciplinary team."
+    },
+    {
+      "title": "Student Member, IMechE",
+      "text": "Institution of Mechanical Engineers."
+    }
+  ],
+  "skills": [
+    {
+      "group": "Simulation",
+      "items": [
+        "ANSYS Fluent",
+        "CFD",
+        "FEA and modal analysis",
+        "RANS turbulence modelling",
+        "Finite-rate chemistry",
+        "Mesh independence",
+        "Verification and validation"
+      ]
+    },
+    {
+      "group": "Programming and data",
+      "items": [
+        "Python",
+        "C and C++",
+        "MATLAB and Simulink",
+        "VBA",
+        "PyTorch",
+        "OpenCV"
+      ]
+    },
+    {
+      "group": "Design and manufacture",
+      "items": [
+        "CATIA V5",
+        "SolidWorks",
+        "Siemens NX",
+        "CNC machining",
+        "3D printing",
+        "Arduino",
+        "One Click LCA"
+      ]
+    },
+    {
+      "group": "Ways of working",
+      "items": [
+        "QA and QC",
+        "Technical documentation",
+        "Agile teams",
+        "Teamcenter PLM",
+        "Claude Code and Cursor"
+      ]
+    }
+  ],
   "tracks": [
     {
       "id": "simulation",
-      "title": "Open-source simulation",
-      "why": "Employers use more than ANSYS. Showing the same rigour in OpenFOAM or SU2 proves the method, not the tool.",
+      "title": "Simulation",
+      "why": "Employers use more than ANSYS. Showing the same method in OpenFOAM or SU2 proves the approach, not just the tool.",
       "planned": [
         "Rebuild the NACA 0012 airfoil study in SU2 or OpenFOAM and compare against the Fluent and NASA results",
         "Scripted mesh-independence and validation workflow in Python, reusable across cases",
@@ -34,13 +141,13 @@
       "title": "Engineering and machine learning",
       "why": "Builds on the PyTorch automation at Siemens and the Gaussian process model from H2OME.",
       "planned": [
-        "Surrogate model for heat sink or airfoil data, with an honest error analysis against the full simulation",
+        "Surrogate model for heat sink or airfoil data, with an error analysis against the full simulation",
         "Design-of-experiments and optimisation loop driving a parametric model"
       ]
     },
     {
       "id": "software",
-      "title": "Engineering software and tooling",
+      "title": "Engineering software",
       "why": "Fills the CI/CD and SQL gaps that appear in roles matching the QA and test archetype.",
       "planned": [
         "Automated regression tests with CI for the simulation scripts above",
@@ -50,7 +157,7 @@
     {
       "id": "design",
       "title": "Design and manufacture",
-      "why": "Traditional mechanical design is still the core of most graduate roles, so it deserves visible, current work.",
+      "why": "Mechanical design is the core of most graduate roles, so it deserves visible, current work.",
       "planned": [
         "A designed-for-manufacture part: CAD model, drawings with tolerancing, and a process and material justification",
         "DFM review of an existing product with cost and process trade-offs",
