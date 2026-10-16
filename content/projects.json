@@ -440,6 +440,92 @@
     "evidence": "The coursework report can be shared on request."
   },
   {
+    "slug": "wind-turbine-blade-fea",
+    "title": "Wind Turbine Blade Finite Element Analysis",
+    "period": "Nov 2023",
+    "context": "FEEG3001 Finite Element Analysis coursework, University of Southampton",
+    "role": "Individual coursework.",
+    "track": "simulation",
+    "featured": false,
+    "tools": [
+      "ANSYS Static Structural",
+      "Modal analysis",
+      "Mesh convergence study",
+      "Euler-Bernoulli beam theory"
+    ],
+    "summary": "A structural model of a steel wind turbine blade under three load cases and a modal analysis, checked against beam theory, tested for mesh convergence, then used to judge the blade at its 20 m/s design wind speed.",
+    "facts": [
+      {
+        "value": "Within 3%",
+        "label": "root stress and tip-load deflection against Euler-Bernoulli beam theory"
+      },
+      {
+        "value": "0.58 to 7.5 Hz",
+        "label": "first six natural frequencies from the modal analysis"
+      },
+      {
+        "value": "4.3E+08 Pa",
+        "label": "equivalent stress at 20 m/s, against a 2.5E+08 Pa steel yield strength"
+      }
+    ],
+    "hero": {
+      "src": "wt-deflection.jpg",
+      "caption": "Tip deflection of the blade under pressure, rotation and gravity"
+    },
+    "sections": [
+      {
+        "heading": "Three load cases",
+        "body": [
+          "I modelled a steel blade in ANSYS Static Structural. Case A combined a 1190 Pa pressure load with rotation at 1.5708 rad/s and gravity, the closest of the three to real operation. Case B applied the pressure load alone, and Case C applied a 109 kN force at the tip.",
+          "Tip deflection came to 0.147 m for case A, 0.269 m for case B and 0.631 m for case C. In case A, maximum equivalent stress was 1.99E+08 Pa, against a steel yield strength of 2.5E+08 Pa, and sat at the transition from the hub to the blade."
+        ],
+        "figures": [
+          {
+            "src": "wt-equivalent-stress.jpg",
+            "caption": "Equivalent stress for the combined load case"
+          },
+          {
+            "src": "wt-tip-load-stress.jpg",
+            "caption": "Equivalent stress under the concentrated tip load"
+          }
+        ]
+      },
+      {
+        "heading": "Checking against beam theory",
+        "body": [
+          "Euler-Bernoulli beam theory gave a root stress of 1.74E+07 Pa and tip deflections of 0.651 m for the tip load and 0.392 m for the pressure load. The model agreed on root stress to within 3% and on tip-load deflection to 3.1%.",
+          "Pressure-load deflection differed by 37%. The analytical solution treats the load as a point force, while the model spreads it over the surface, so I took the numerical result as the more reliable one."
+        ]
+      },
+      {
+        "heading": "Mesh convergence",
+        "body": [
+          "I refined the mesh from 1 m elements down to 0.15 m and tracked deflection and stress. Tip deflection converged. Peak equivalent stress kept rising as the mesh got finer, because the peak sits at the hub transition, where the loading and constraint create a stress singularity."
+        ]
+      },
+      {
+        "heading": "Natural frequencies",
+        "body": [
+          "A modal analysis of the first six modes gave frequencies from 0.58 Hz to 7.5 Hz. Knowing where these natural frequencies sit helps avoid resonance in operation."
+        ],
+        "figures": [
+          {
+            "src": "wt-mode-shape.jpg",
+            "caption": "One of the six mode shapes from the modal analysis"
+          }
+        ]
+      },
+      {
+        "heading": "Judging the design",
+        "body": [
+          "At the 20 m/s upper design wind speed, the blade carries about 887 kN, which is equivalent to a 434.6 kN tip load. That produced an equivalent stress of 4.3E+08 Pa, well above the steel yield strength, so the blade is not safe at that speed.",
+          "Given the mesh result, I flagged that figure as needing a finer mesh or a physical test. I recommended a smoother change in geometry from the circular root to the blade, a fatigue analysis for the varying wind speed, and a material able to take 20 m/s."
+        ]
+      }
+    ],
+    "evidence": "The coursework report can be shared on request."
+  },
+  {
     "slug": "battery-digital-twin",
     "title": "Battery Manufacturing Digital Twin and Life Cycle Assessment",
     "period": "Feb to Apr 2026",
