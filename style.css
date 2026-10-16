@@ -204,3 +204,5 @@ h3 { font-size: 1.05rem; line-height: 1.35; margin: 0 0 0.35rem; }
 .hero .lead, .hero .intro { margin-left: auto; margin-right: auto; }
 .hero .actions { justify-content: center; }
 .hero .stats { text-align: center; }
+
+.analytics-note { margin: -14px 0 0; padding-bottom: 22px; color: var(--muted); font-size: 0.8rem; }

@@ -113,6 +113,7 @@ ${body}
   <span>${esc(site.name)} · ${esc(site.location)}</span>
   <span><a href="mailto:${esc(site.email)}">Email</a> · <a href="${esc(site.linkedin)}">LinkedIn</a></span>
 </div></footer>
+${site.goatcounter ? `<p class="analytics-note"><span class="wrap">Visits are counted with cookieless analytics (GoatCounter). No personal data is collected.</span></p>` : ''}
 <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged figure" hidden>
   <button class="lb-close" type="button" aria-label="Close">&times;</button>
   <button class="lb-prev" type="button" aria-label="Previous figure">&lsaquo;</button>
@@ -120,6 +121,7 @@ ${body}
   <button class="lb-next" type="button" aria-label="Next figure">&rsaquo;</button>
 </div>
 <script src="${up(depth)}site.js"></script>
+${site.goatcounter ? `<script data-goatcounter="https://${esc(site.goatcounter)}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>` : ''}
 </body>
 </html>
 `;
