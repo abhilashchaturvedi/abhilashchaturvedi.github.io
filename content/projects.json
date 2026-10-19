@@ -501,7 +501,7 @@
       {
         "heading": "Mesh convergence",
         "body": [
-          "I refined the mesh from 1 m elements down to 0.15 m and tracked deflection and stress. Tip deflection converged. Peak equivalent stress kept rising as the mesh got finer, because the peak sits at the hub transition, where the loading and constraint create a stress singularity."
+          "I refined the mesh, reducing the element size from 1.0 m down to 0.15 m, and tracked deflection and stress. Tip deflection converged. Peak equivalent stress kept rising as the mesh got finer, because the peak sits at the hub transition, where the loading and constraint create a stress singularity."
         ]
       },
       {
